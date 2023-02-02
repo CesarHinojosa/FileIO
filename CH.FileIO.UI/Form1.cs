@@ -151,7 +151,7 @@ namespace CH.FileIO.UI
 
         private void txtDocument_TextChanged(object sender, EventArgs e)
         {
-            FirstSave = false;
+            FirstSave = false; 
         }
     }
 }
