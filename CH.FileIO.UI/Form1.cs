@@ -23,10 +23,43 @@ namespace CH.FileIO.UI
         {
             txtDocument.WordWrap = mnuWordWrap.Checked;
         }
-        //private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        //{
-        
-        //}
+
+        //it works but it doesn't as well
+        //the no button has to be selected twice
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
+            if (staFile.Text != "")
+            {
+                FirstSave = true;
+                Application.Exit();
+
+            }
+            else if (staFile.Text == "")
+            {
+                DialogResult result = MessageBox.Show("Would you like to save the changes?", "Alert Box", MessageBoxButtons.YesNoCancel);
+
+                //if the user does want to save changes it calls the mnuSaveAs_Click function 
+                if (result == DialogResult.Yes)
+                {
+
+                    mnuSaveAs_Click(sender, e);
+                    FirstSave = true;
+                }
+                //if cancel it closes the form 
+                else if (result == DialogResult.Cancel)
+                {
+                    FirstSave = true;
+                    
+                }
+                else if (result == DialogResult.No)
+                {
+                    txtDocument.Clear();
+                    this.Text = "Untitled";
+                    staFile.Text = "";
+                }
+            }
+        }
 
         //when the form is loaded the following happens
         private void Form1_Load(object sender, EventArgs e)

@@ -35,15 +35,14 @@
             this.mnuSave = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuSaveAs = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
-            this.mnuExit = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuEdit = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuWordWrap = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.mnuPath = new System.Windows.Forms.ToolStripStatusLabel();
+            this.staFile = new System.Windows.Forms.ToolStripStatusLabel();
             this.staSpring = new System.Windows.Forms.ToolStripStatusLabel();
             this.staDateTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.txtDocument = new System.Windows.Forms.TextBox();
-            this.staFile = new System.Windows.Forms.ToolStripStatusLabel();
             this.mnuMain.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -67,8 +66,7 @@
             this.mnuOpen,
             this.mnuSave,
             this.mnuSaveAs,
-            this.toolStripMenuItem2,
-            this.mnuExit});
+            this.toolStripMenuItem2});
             this.mnuFile.Name = "mnuFile";
             this.mnuFile.Size = new System.Drawing.Size(46, 24);
             this.mnuFile.Text = "&File";
@@ -76,41 +74,35 @@
             // mnuNew
             // 
             this.mnuNew.Name = "mnuNew";
-            this.mnuNew.Size = new System.Drawing.Size(148, 26);
+            this.mnuNew.Size = new System.Drawing.Size(224, 26);
             this.mnuNew.Text = "&New";
             this.mnuNew.Click += new System.EventHandler(this.mnuNew_Click);
             // 
             // mnuOpen
             // 
             this.mnuOpen.Name = "mnuOpen";
-            this.mnuOpen.Size = new System.Drawing.Size(148, 26);
+            this.mnuOpen.Size = new System.Drawing.Size(224, 26);
             this.mnuOpen.Text = "&Open";
             this.mnuOpen.Click += new System.EventHandler(this.mnuOpen_Click);
             // 
             // mnuSave
             // 
             this.mnuSave.Name = "mnuSave";
-            this.mnuSave.Size = new System.Drawing.Size(148, 26);
+            this.mnuSave.Size = new System.Drawing.Size(224, 26);
             this.mnuSave.Text = "&Save";
             this.mnuSave.Click += new System.EventHandler(this.mnuSave_Click);
             // 
             // mnuSaveAs
             // 
             this.mnuSaveAs.Name = "mnuSaveAs";
-            this.mnuSaveAs.Size = new System.Drawing.Size(148, 26);
+            this.mnuSaveAs.Size = new System.Drawing.Size(224, 26);
             this.mnuSaveAs.Text = "&SaveAs...";
             this.mnuSaveAs.Click += new System.EventHandler(this.mnuSaveAs_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(145, 6);
-            // 
-            // mnuExit
-            // 
-            this.mnuExit.Name = "mnuExit";
-            this.mnuExit.Size = new System.Drawing.Size(148, 26);
-            this.mnuExit.Text = "&Exit";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(221, 6);
             // 
             // mnuEdit
             // 
@@ -146,18 +138,23 @@
             // mnuPath
             // 
             this.mnuPath.Name = "mnuPath";
-            this.mnuPath.Size = new System.Drawing.Size(0, 18);
+            this.mnuPath.Size = new System.Drawing.Size(0, 16);
+            // 
+            // staFile
+            // 
+            this.staFile.Name = "staFile";
+            this.staFile.Size = new System.Drawing.Size(0, 16);
             // 
             // staSpring
             // 
             this.staSpring.Name = "staSpring";
-            this.staSpring.Size = new System.Drawing.Size(746, 18);
+            this.staSpring.Size = new System.Drawing.Size(785, 16);
             this.staSpring.Spring = true;
             // 
             // staDateTime
             // 
             this.staDateTime.Name = "staDateTime";
-            this.staDateTime.Size = new System.Drawing.Size(0, 18);
+            this.staDateTime.Size = new System.Drawing.Size(0, 16);
             // 
             // txtDocument
             // 
@@ -168,11 +165,6 @@
             this.txtDocument.Size = new System.Drawing.Size(800, 346);
             this.txtDocument.TabIndex = 2;
             this.txtDocument.TextChanged += new System.EventHandler(this.txtDocument_TextChanged);
-            // 
-            // staFile
-            // 
-            this.staFile.Name = "staFile";
-            this.staFile.Size = new System.Drawing.Size(0, 16);
             // 
             // Form1
             // 
@@ -185,7 +177,7 @@
             this.MainMenuStrip = this.mnuMain;
             this.Name = "Form1";
             this.Text = "Form1";
-            //this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.mnuMain.ResumeLayout(false);
             this.mnuMain.PerformLayout();
@@ -212,7 +204,6 @@
         private ToolStripMenuItem mnuEdit;
         private ToolStripMenuItem mnuWordWrap;
         private ToolStripSeparator toolStripMenuItem2;
-        private ToolStripMenuItem mnuExit;
         private ToolStripStatusLabel staFile;
     }
 }
